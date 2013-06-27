@@ -1,0 +1,1643 @@
+@font-face {
+  font-family: entypo;
+  font-weight: normal;
+  font-style: normal;
+  src: url("./entypo/entypo.eot");
+  src: url("./entypo/entypo.eot?#iefix") format("embedded-opentype"), url("./entypo/entypo.woff") format("woff"), url("./entypo/entypo.ttf") format("truetype"), url("./entypo/entypo.svg#entypo") format("svg"); }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #919191;
+  background-color: #fbfbfb; }
+
+a {
+  color: #919191;
+  background-color: none; }
+
+h1, h2 {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-bottom: 0px; }
+
+h1 {
+  margin-top: 36px;
+  margin-left: 23px;
+  font-size: 21px; }
+
+.orange-link, a.view-all {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s; }
+  .orange-link:hover, a.view-all:hover {
+    color: #ff6600; }
+
+a.project-link {
+  background: #fbfbfb;
+  border: 1px solid #e0e0e0;
+  padding: 10px 40px 11px 16px; }
+
+h2 {
+  color: #7f7f7f; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0px; }
+
+.entypo {
+  font-family: "entypo";
+  text-decoration: none;
+  background: none;
+  cursor: pointer; }
+
+a.view-all {
+  font-size: 14px;
+  margin-left: 2px; }
+
+/* Form elements */
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
+  -webkit-transition: box-shadow 0.5s;
+  -moz-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  border: 1px dotted #dedede;
+  background: whitesmoke;
+  font-size: 18px;
+  padding: 1em; }
+
+input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover {
+  box-shadow: 0px 0px 3px #326587;
+  outline: 0px !important;
+  -webkit-appearance: none; }
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus {
+  box-shadow: 0px 0px 5px #326587;
+  outline: 0px !important;
+  -webkit-appearance: none; }
+
+textarea {
+  border: none;
+  background: #e0e0e0;
+  margin: 1em;
+  padding: 1em;
+  -webkit-transition: box-shadow 0.5s;
+  -moz-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  outline: 0px !important;
+  -webkit-appearance: none;
+  border: 1px dotted #dedede; }
+  textarea:hover {
+    box-shadow: 0px 0px 3px #326587;
+    outline: 0px !important;
+    -webkit-appearance: none; }
+  textarea:focus {
+    box-shadow: 0px 0px 5px #326587;
+    outline: 0px !important;
+    -webkit-appearance: none; }
+
+/* Header for main application */
+header .primary-link span {
+  display: block;
+  margin-top: 42px;
+  height: 53px;
+  width: 460px; }
+  header .primary-link span img {
+    display: inline-block; }
+  header .primary-link span h1 {
+    margin-top: 0px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 21px;
+    margin-left: 0px;
+    position: relative;
+    bottom: 4px; }
+  header .primary-link span h2 {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    top: 55%;
+    left: 25%; }
+  header .primary-link span a.screen-number {
+    background: #e0e0e0;
+    padding: .5em .75em;
+    font-size: 12px;
+    text-decoration: none;
+    position: absolute;
+    left: 25%;
+    top: 69%; }
+  header .primary-link span p {
+    position: absolute;
+    display: inline;
+    left: 31%;
+    margin: 0;
+    padding: 0;
+    top: 74%; }
+  header .primary-link span a.user {
+    width: 50px;
+    height: 34px;
+    background: #b5b5b5;
+    display: inline-block;
+    font-weight: bold;
+    border: 0;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    padding-top: 16px;
+    text-decoration: none; }
+header p {
+  display: inline-block;
+  margin-top: 51px;
+  margin-left: 121px;
+  font-size: 14px; }
+header .login {
+  width: 540px;
+  height: 112px; }
+  header .login span {
+    position: absolute;
+    top: 20px;
+    left: 370px;
+    font-size: 15px; }
+  header .login .entypo {
+    background: #70c171;
+    color: white;
+    display: inline-block;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+    font-size: 38px;
+    padding: 0px 10px 0px 10px;
+    font-weight: normal;
+    position: relative;
+    vertical-align: middle;
+    bottom: 1px; }
+    header .login .entypo:hover {
+      background: #4b8a4c; }
+
+span.initials {
+  color: black;
+  font-weight: bold;
+  background: #fbfbfb;
+  display: inline-block;
+  width: 45px;
+  text-align: center;
+  padding: 13px 0px;
+  margin: 1px;
+  border: 1px #c1c1c1 solid;
+  cursor: pointer; }
+
+span.initials.entypo {
+  color: white;
+  background: #70c171;
+  border-color: #70c171;
+  font-size: 45px;
+  padding: 0px;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  top: 5px;
+  text-align: center;
+  cursor: pointer; }
+  span.initials.entypo:hover {
+    background: #4b8a4c; }
+
+span.initials.leader {
+  background: whitesmoke; }
+
+nav {
+  height: 37px;
+  margin-bottom: 10px; }
+  nav a {
+    display: inline-block;
+    margin-left: 10px; }
+  nav a.main-nav {
+    background: #326587;
+    color: white;
+    padding: 0.5em 1em;
+    font-size: 17px;
+    text-decoration: none; }
+  nav a.comments {
+    background: #70c171;
+    color: white;
+    display: inline-block;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    float: right;
+    margin-top: 10px;
+    font-weight: normal;
+    margin: 2px 10px 0 0; }
+    nav a.comments:hover {
+      background: #4b8a4c; }
+
+section.members ul li {
+  display: inline-block; }
+
+section.recent-activity, section.to-do {
+  display: block;
+  vertical-align: top; }
+  section.recent-activity p, section.to-do p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px; }
+  section.recent-activity li, section.to-do li {
+    height: 58px; }
+  section.recent-activity p.datetime, section.to-do p.datetime {
+    color: gray; }
+  section.recent-activity span.numbers, section.to-do span.numbers {
+    display: inline-block;
+    background: #70c171;
+    color: white;
+    width: 53px;
+    text-align: center;
+    padding: 13px 0px;
+    font-weight: bold; }
+  section.recent-activity span.initials, section.to-do span.initials {
+    display: inline-block; }
+  section.recent-activity span.right-text, section.to-do span.right-text {
+    display: inline-block; }
+
+section.to-do span.numbers {
+  display: inline-block;
+  background: #70c171;
+  color: white;
+  width: 45px;
+  text-align: center;
+  padding: 13px 0px;
+  font-weight: normal;
+  font-size: 14px;
+  height: 18px;
+  margin: 0px;
+  vertical-align: middle; }
+section.to-do span.initials {
+  display: inline-block; }
+section.to-do span.right-text {
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  width: 80%;
+  height: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  white-space: normal; }
+section.to-do li {
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 4px;
+  margin: 0; }
+section.to-do p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  text-overflow: ellipsis; }
+section.to-do p.datetime {
+  color: gray; }
+
+section.sections .entypo {
+  font-size: 57px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+  text-align: center; }
+section.sections li {
+  background: #f5f5f5;
+  border: 1px solid #ededed;
+  margin: 10px; }
+section.sections p, section.sections strong, section.sections span {
+  display: inline-block;
+  vertical-align: middle; }
+section.sections strong {
+  width: 15%;
+  text-align: center;
+  position: relative;
+  right: 10px; }
+section.sections p {
+  width: 50%;
+  font-size: 14px; }
+section.sections div {
+  width: 17%;
+  display: inline-block; }
+  section.sections div span {
+    text-align: center;
+    border: 2px solid #ebebeb;
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+    width: 18px; }
+
+section.resources li {
+  width: 148px;
+  height: 148px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  border: 1px dotted #eae9e9; }
+section.resources img {
+  margin: 0;
+  padding: 0; }
+section.resources div.empty {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 148px;
+  width: 148px; }
+  section.resources div.empty .entypo {
+    display: inline-block;
+    opacity: 1;
+    color: white;
+    background: #70c171;
+    border-color: #70c171;
+    font-size: 40px;
+    padding: 0px;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -20px; }
+    section.resources div.empty .entypo:hover {
+      background: #4b8a4c; }
+
+.blue-hover .blue, section.sections .blue {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  .blue-hover .blue:hover, section.sections .blue:hover {
+    background: #5dace1 !important;
+    color: white; }
+  .blue-hover .blue a, section.sections .blue a {
+    color: white; }
+  .blue-hover .blue span.numbers, section.sections .blue span.numbers {
+    background: #1f8f00; }
+  .blue-hover .blue span.box, section.sections .blue span.box {
+    background: #ffffff;
+    color: #919191;
+    border-color: white; }
+  .blue-hover .blue .entypo, section.sections .blue .entypo {
+    color: white; }
+  .blue-hover .blue span.top a, section.sections .blue span.top a {
+    background: #f5f5f5;
+    color: #b5b5b5; }
+  .blue-hover .blue .datetime, section.sections .blue .datetime {
+    color: white; }
+
+section.to-do li {
+  color: #919191;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  section.to-do li div {
+    display: none;
+    position: absolute;
+    right: 3%;
+    top: 12px;
+    background: white;
+    height: 30px;
+    width: 30px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 100px; }
+    section.to-do li div .entypo {
+      font-size: 50px;
+      text-align: center;
+      display: block;
+      position: relative;
+      bottom: 10px;
+      color: #7a786c !important; }
+  section.to-do li:hover div {
+    display: inline-block; }
+  section.to-do li:hover .entypo {
+    opacity: 1; }
+
+section.dashboard-cards ul li {
+  display: inline-block;
+  width: 33px;
+  height: 27px;
+  text-align: center;
+  padding-top: 8px; }
+section.dashboard-cards ul.numbers {
+  padding-bottom: 0px;
+  margin-bottom: 0px; }
+  section.dashboard-cards ul.numbers li {
+    background: #e0e0e0;
+    margin-bottom: 0px; }
+  section.dashboard-cards ul.numbers li.active {
+    background: #326587;
+    color: white;
+    font-weight: bold;
+    padding-top: 7px; }
+section.dashboard-cards ul.components {
+  margin-top: 0; }
+  section.dashboard-cards ul.components li.active {
+    color: #919191;
+    font-weight: bold; }
+section.dashboard-cards img {
+  margin-top: 8px; }
+section.dashboard-cards > div {
+  background: #f9f9f9;
+  border: 1px dotted #eae9e9;
+  display: inline-block;
+  width: 324px;
+  height: 324px;
+  vertical-align: top;
+  padding: 10px;
+  position: relative; }
+  section.dashboard-cards > div:nth-child(even) {
+    position: relative;
+    right: 4px; }
+  section.dashboard-cards > div .entypo {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+    opacity: 0; }
+  section.dashboard-cards > div .option-top-right {
+    font-size: 45px;
+    position: absolute;
+    right: 7%;
+    top: 0%; }
+  section.dashboard-cards > div .option-bottom-right {
+    font-size: 35px;
+    position: absolute;
+    right: 7%;
+    bottom: 5%; }
+  section.dashboard-cards > div .option-top-left {
+    font-size: 35px;
+    position: absolute;
+    left: 7%;
+    top: 0%; }
+  section.dashboard-cards > div .option-bottom-left {
+    font-size: 35px;
+    position: absolute;
+    left: 7%;
+    bottom: 5%; }
+  section.dashboard-cards > div .option-gold-hover:hover {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+    color: #FF0;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66); }
+  section.dashboard-cards > div:hover .entypo {
+    display: inline-block;
+    opacity: 1; }
+  section.dashboard-cards > div .option-top-right, section.dashboard-cards > div .option-bottom-right {
+    right: 4%; }
+  section.dashboard-cards > div .option-top-right {
+    top: -1%; }
+  section.dashboard-cards > div .option-bottom-right {
+    bottom: 1.5%; }
+  section.dashboard-cards > div span.top {
+    display: block; }
+    section.dashboard-cards > div span.top a {
+      background: #b5b5b5;
+      color: white;
+      display: inline-block;
+      text-decoration: none;
+      height: 21px;
+      width: 30px;
+      text-align: center;
+      font-size: 12px;
+      vertical-align: middle;
+      padding-top: 9px; }
+    section.dashboard-cards > div span.top strong {
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: top;
+      text-overflow: ellipsis;
+      width: 256px;
+      height: 19px;
+      overflow: hidden;
+      white-space: nowrap; }
+section.dashboard-cards div.portrait span.bottom {
+  position: absolute;
+  left: 53%;
+  top: 9.4%; }
+section.dashboard-cards div.landscape span.bottom {
+  position: absolute;
+  left: 44%;
+  top: 58%; }
+section.dashboard-cards div.empty {
+  position: relative;
+  top: 0;
+  left: 0; }
+  section.dashboard-cards div.empty .entypo {
+    display: inline-block;
+    opacity: 1;
+    color: white;
+    background: #70c171;
+    border-color: #70c171;
+    font-size: 60px;
+    padding: 0px;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px; }
+    section.dashboard-cards div.empty .entypo:hover {
+      background: #4b8a4c; }
+
+section.my-projects div.empty {
+  position: relative;
+  top: 0;
+  left: 0;
+  vertical-align: top;
+  left: 11px; }
+  section.my-projects div.empty .entypo {
+    display: inline-block;
+    opacity: 1;
+    color: white;
+    background: #70c171;
+    border-color: #70c171;
+    font-size: 60px;
+    padding: 0px;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px; }
+    section.my-projects div.empty .entypo:hover {
+      background: #4b8a4c; }
+section.my-projects > div {
+  display: inline-block;
+  width: 305px;
+  left: 11px;
+  height: 400px;
+  padding: 5px 15px;
+  background: #f9f9f9;
+  border: 1px dotted #eae9e9;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s; }
+  section.my-projects > div h3 {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
+    margin: 6px 0 0 4px;
+    vertical-align: top; }
+  section.my-projects > div img {
+    display: inline-block; }
+  section.my-projects > div .initials.entypo {
+    opacity: 1; }
+  section.my-projects > div .entypo {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+    opacity: 0; }
+  section.my-projects > div .option-top-right {
+    font-size: 45px;
+    position: absolute;
+    right: 7%;
+    top: 0%; }
+  section.my-projects > div .option-bottom-right {
+    font-size: 35px;
+    position: absolute;
+    right: 7%;
+    bottom: 5%; }
+  section.my-projects > div .option-top-left {
+    font-size: 35px;
+    position: absolute;
+    left: 7%;
+    top: 0%; }
+  section.my-projects > div .option-bottom-left {
+    font-size: 35px;
+    position: absolute;
+    left: 7%;
+    bottom: 5%; }
+  section.my-projects > div .option-gold-hover:hover {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+    color: #FF0;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66); }
+  section.my-projects > div:hover .entypo {
+    display: inline-block;
+    opacity: 1; }
+  section.my-projects > div .option-top-right, section.my-projects > div .option-bottom-right {
+    right: 3%; }
+  section.my-projects > div .option-bottom-right, section.my-projects > div .option-bottom-left {
+    bottom: 1.5%; }
+  section.my-projects > div .option-bottom-left {
+    left: 3%; }
+  section.my-projects > div ul {
+    margin-top: 0px; }
+  section.my-projects > div ul:first-of-type li {
+    display: inline-block; }
+  section.my-projects > div ul:last-of-type li {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+    section.my-projects > div ul:last-of-type li div {
+      display: none;
+      position: absolute;
+      right: 3%;
+      top: 14px;
+      background: white;
+      height: 30px;
+      width: 30px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      border-radius: 100px; }
+      section.my-projects > div ul:last-of-type li div .entypo {
+        font-size: 50px;
+        text-align: center;
+        display: block;
+        position: relative;
+        bottom: 10px;
+        color: #7a786c !important; }
+    section.my-projects > div ul:last-of-type li:hover div {
+      display: inline-block; }
+    section.my-projects > div ul:last-of-type li:hover .entypo {
+      opacity: 1; }
+    section.my-projects > div ul:last-of-type li div .entypo {
+      top: -10px;
+      right: 0; }
+  section.my-projects > div ul:last-of-type span.numbers {
+    display: inline-block;
+    background: #70c171;
+    color: white;
+    width: 45px;
+    text-align: center;
+    padding: 13px 0px;
+    font-weight: normal;
+    font-size: 14px;
+    height: 18px;
+    margin: 0px;
+    vertical-align: middle; }
+  section.my-projects > div ul:last-of-type span.initials {
+    display: inline-block; }
+  section.my-projects > div ul:last-of-type span.right-text {
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    width: 80%;
+    height: 36px;
+    overflow: hidden;
+    white-space: nowrap;
+    white-space: normal; }
+  section.my-projects > div ul:last-of-type li {
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 4px;
+    margin: 0; }
+  section.my-projects > div ul:last-of-type p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    text-overflow: ellipsis; }
+  section.my-projects > div ul:last-of-type p.datetime {
+    color: gray; }
+  section.my-projects > div:hover {
+    background: #deecf6; }
+
+section.link-to-screenshot h2, section.interactions h2, section.if-then-scenarios h2, section.dynamic-data h2, #fb-link-to-screenshot aside h2, #fb-select-from-existing aside h2 {
+  position: relative;
+  bottom: 5px;
+  margin: 0; }
+section.link-to-screenshot div, section.interactions div, section.if-then-scenarios div, section.dynamic-data div, #fb-link-to-screenshot aside div, #fb-select-from-existing aside div {
+  width: 175px;
+  height: 175px;
+  margin-bottom: 3px;
+  display: inline-block;
+  position: relative;
+  background: #f9f9f9;
+  border: 1px dotted #eae9e9;
+  vertical-align: top; }
+  section.link-to-screenshot div .entypo, section.interactions div .entypo, section.if-then-scenarios div .entypo, section.dynamic-data div .entypo, #fb-link-to-screenshot aside div .entypo, #fb-select-from-existing aside div .entypo {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+    opacity: 0; }
+  section.link-to-screenshot div .option-top-right, section.interactions div .option-top-right, section.if-then-scenarios div .option-top-right, section.dynamic-data div .option-top-right, #fb-link-to-screenshot aside div .option-top-right, #fb-select-from-existing aside div .option-top-right {
+    font-size: 45px;
+    position: absolute;
+    right: 7%;
+    top: 0%; }
+  section.link-to-screenshot div .option-bottom-right, section.interactions div .option-bottom-right, section.if-then-scenarios div .option-bottom-right, section.dynamic-data div .option-bottom-right, #fb-link-to-screenshot aside div .option-bottom-right, #fb-select-from-existing aside div .option-bottom-right {
+    font-size: 35px;
+    position: absolute;
+    right: 7%;
+    bottom: 5%; }
+  section.link-to-screenshot div .option-top-left, section.interactions div .option-top-left, section.if-then-scenarios div .option-top-left, section.dynamic-data div .option-top-left, #fb-link-to-screenshot aside div .option-top-left, #fb-select-from-existing aside div .option-top-left {
+    font-size: 35px;
+    position: absolute;
+    left: 7%;
+    top: 0%; }
+  section.link-to-screenshot div .option-bottom-left, section.interactions div .option-bottom-left, section.if-then-scenarios div .option-bottom-left, section.dynamic-data div .option-bottom-left, #fb-link-to-screenshot aside div .option-bottom-left, #fb-select-from-existing aside div .option-bottom-left {
+    font-size: 35px;
+    position: absolute;
+    left: 7%;
+    bottom: 5%; }
+  section.link-to-screenshot div .option-gold-hover:hover, section.interactions div .option-gold-hover:hover, section.if-then-scenarios div .option-gold-hover:hover, section.dynamic-data div .option-gold-hover:hover, #fb-link-to-screenshot aside div .option-gold-hover:hover, #fb-select-from-existing aside div .option-gold-hover:hover {
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+    color: #FF0;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66); }
+  section.link-to-screenshot div:hover .entypo, section.interactions div:hover .entypo, section.if-then-scenarios div:hover .entypo, section.dynamic-data div:hover .entypo, #fb-link-to-screenshot aside div:hover .entypo, #fb-select-from-existing aside div:hover .entypo {
+    display: inline-block;
+    opacity: 1; }
+  section.link-to-screenshot div img, section.interactions div img, section.if-then-scenarios div img, section.dynamic-data div img, #fb-link-to-screenshot aside div img, #fb-select-from-existing aside div img {
+    display: block; }
+  section.link-to-screenshot div strong, section.interactions div strong, section.if-then-scenarios div strong, section.dynamic-data div strong, #fb-link-to-screenshot aside div strong, #fb-select-from-existing aside div strong {
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+    text-decoration: underline;
+    font-size: 16px; }
+  section.link-to-screenshot div span, section.interactions div span, section.if-then-scenarios div span, section.dynamic-data div span, #fb-link-to-screenshot aside div span, #fb-select-from-existing aside div span {
+    text-align: center;
+    display: block;
+    margin: 8px;
+    font-weight: 300;
+    font-size: 15px; }
+  section.link-to-screenshot div p, section.interactions div p, section.if-then-scenarios div p, section.dynamic-data div p, #fb-link-to-screenshot aside div p, #fb-select-from-existing aside div p {
+    text-align: center;
+    display: block;
+    font-weight: 300; }
+section.link-to-screenshot div.empty, section.interactions div.empty, section.if-then-scenarios div.empty, section.dynamic-data div.empty, #fb-link-to-screenshot aside div.empty, #fb-select-from-existing aside div.empty {
+  position: relative;
+  top: 0;
+  left: 0; }
+  section.link-to-screenshot div.empty .entypo, section.interactions div.empty .entypo, section.if-then-scenarios div.empty .entypo, section.dynamic-data div.empty .entypo, #fb-link-to-screenshot aside div.empty .entypo, #fb-select-from-existing aside div.empty .entypo {
+    display: inline-block;
+    opacity: 1;
+    color: white;
+    background: #70c171;
+    border-color: #70c171;
+    font-size: 60px;
+    padding: 0px;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px; }
+    section.link-to-screenshot div.empty .entypo:hover, section.interactions div.empty .entypo:hover, section.if-then-scenarios div.empty .entypo:hover, section.dynamic-data div.empty .entypo:hover, #fb-link-to-screenshot aside div.empty .entypo:hover, #fb-select-from-existing aside div.empty .entypo:hover {
+      background: #4b8a4c; }
+
+section.comment-interface, section.ix-interface, section.ui-interface, section.if-then-interface, section.dd-interface {
+  position: relative;
+  top: 0;
+  left: 0; }
+  section.comment-interface ul li, section.ix-interface ul li, section.ui-interface ul li, section.if-then-interface ul li, section.dd-interface ul li {
+    display: inline-block;
+    width: 33px;
+    height: 27px;
+    text-align: center;
+    padding-top: 8px; }
+  section.comment-interface ul.numbers, section.ix-interface ul.numbers, section.ui-interface ul.numbers, section.if-then-interface ul.numbers, section.dd-interface ul.numbers {
+    padding-bottom: 0px;
+    margin-bottom: 0px; }
+    section.comment-interface ul.numbers li, section.ix-interface ul.numbers li, section.ui-interface ul.numbers li, section.if-then-interface ul.numbers li, section.dd-interface ul.numbers li {
+      background: #e0e0e0;
+      margin-bottom: 0px; }
+    section.comment-interface ul.numbers li.active, section.ix-interface ul.numbers li.active, section.ui-interface ul.numbers li.active, section.if-then-interface ul.numbers li.active, section.dd-interface ul.numbers li.active {
+      background: #326587;
+      color: white;
+      font-weight: bold;
+      padding-top: 7px; }
+  section.comment-interface ul.components, section.ix-interface ul.components, section.ui-interface ul.components, section.if-then-interface ul.components, section.dd-interface ul.components {
+    margin-top: 0; }
+    section.comment-interface ul.components li.active, section.ix-interface ul.components li.active, section.ui-interface ul.components li.active, section.if-then-interface ul.components li.active, section.dd-interface ul.components li.active {
+      color: #919191;
+      font-weight: bold; }
+  section.comment-interface ul, section.ix-interface ul, section.ui-interface ul, section.if-then-interface ul, section.dd-interface ul {
+    margin-left: 155px; }
+  section.comment-interface div, section.ix-interface div, section.ui-interface div, section.if-then-interface div, section.dd-interface div {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #f9f9f9;
+    border: 1px dotted #eae9e9;
+    width: 450px;
+    height: 450px; }
+  section.comment-interface a.entypo, section.ix-interface a.entypo, section.ui-interface a.entypo, section.if-then-interface a.entypo, section.dd-interface a.entypo {
+    font-size: 46px;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+  section.comment-interface a.left, section.ix-interface a.left, section.ui-interface a.left, section.if-then-interface a.left, section.dd-interface a.left {
+    left: 18%;
+    top: 0%; }
+  section.comment-interface a.right, section.ix-interface a.right, section.ui-interface a.right, section.if-then-interface a.right, section.dd-interface a.right {
+    right: 5%;
+    top: 0%; }
+  section.comment-interface span, section.ix-interface span, section.ui-interface span, section.if-then-interface span, section.dd-interface span {
+    width: 40%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1em .5em;
+    position: absolute;
+    font-weight: 300;
+    top: 50%;
+    left: 50%;
+    margin-left: -102px;
+    margin-top: -43px;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+  section.comment-interface strong, section.ix-interface strong, section.ui-interface strong, section.if-then-interface strong, section.dd-interface strong {
+    border-radius: 3em;
+    background: #326587;
+    padding: 0.5em;
+    position: absolute;
+    opacity: 0.8;
+    color: white;
+    cursor: move; }
+  section.comment-interface:hover a.entypo, section.comment-interface:hover span, section.ix-interface:hover a.entypo, section.ix-interface:hover span, section.ui-interface:hover a.entypo, section.ui-interface:hover span, section.if-then-interface:hover a.entypo, section.if-then-interface:hover span, section.dd-interface:hover a.entypo, section.dd-interface:hover span {
+    opacity: 1; }
+
+section.comments ul {
+  background: #f5f5f5; }
+  section.comments ul li {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #e0e0e0; }
+    section.comments ul li div {
+      display: none;
+      position: absolute;
+      right: 0%;
+      top: 0%;
+      background: white;
+      height: 30px;
+      width: 30px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      border-radius: 100px; }
+      section.comments ul li div .entypo {
+        font-size: 50px;
+        text-align: center;
+        display: block;
+        position: relative;
+        bottom: 10px;
+        color: #7a786c !important; }
+    section.comments ul li:hover div {
+      display: inline-block; }
+    section.comments ul li:hover .entypo {
+      opacity: 1; }
+    section.comments ul li div.edit, section.comments ul li div.archive {
+      top: 20%; }
+    section.comments ul li div.edit {
+      right: 5%; }
+    section.comments ul li div.archive {
+      right: 12%; }
+    section.comments ul li span.comment-item {
+      display: inline-block;
+      width: 20%;
+      position: absolute;
+      top: 34%;
+      left: 4%; }
+    section.comments ul li p {
+      display: inline-block;
+      width: 86%;
+      margin: 10px 0 10px 11%; }
+    section.comments ul li strong {
+      margin-right: 5px; }
+    section.comments ul li a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: none;
+      margin: 10px auto; }
+
+#fb-resources, #fb-to-do, #fb-recent-activity, #fb-project-overview, #fb-if-then-scenario, #fb-ix-first-overlay,
+#fb-ix-second-overlay, #fb-ix-third-overlay, #fb-ix-fourth-overlay, #fb-ix-fifth-overlay, #fb-link-to-screenshot,
+#fb-select-from-existing, #fb-dynamic-data-type {
+  width: 700px;
+  padding: 0 1em; }
+  #fb-resources h1, #fb-to-do h1, #fb-recent-activity h1, #fb-project-overview h1, #fb-if-then-scenario h1, #fb-ix-first-overlay h1,
+  #fb-ix-second-overlay h1, #fb-ix-third-overlay h1, #fb-ix-fourth-overlay h1, #fb-ix-fifth-overlay h1, #fb-link-to-screenshot h1,
+  #fb-select-from-existing h1, #fb-dynamic-data-type h1 {
+    display: block;
+    margin-left: 0; }
+  #fb-resources div.tagline p, #fb-to-do div.tagline p, #fb-recent-activity div.tagline p, #fb-project-overview div.tagline p, #fb-if-then-scenario div.tagline p, #fb-ix-first-overlay div.tagline p,
+  #fb-ix-second-overlay div.tagline p, #fb-ix-third-overlay div.tagline p, #fb-ix-fourth-overlay div.tagline p, #fb-ix-fifth-overlay div.tagline p, #fb-link-to-screenshot div.tagline p,
+  #fb-select-from-existing div.tagline p, #fb-dynamic-data-type div.tagline p {
+    display: inline-block;
+    color: #919191;
+    background: whitesmoke;
+    padding: 10px 20px;
+    width: 66%; }
+  #fb-resources div.tagline a, #fb-to-do div.tagline a, #fb-recent-activity div.tagline a, #fb-project-overview div.tagline a, #fb-if-then-scenario div.tagline a, #fb-ix-first-overlay div.tagline a,
+  #fb-ix-second-overlay div.tagline a, #fb-ix-third-overlay div.tagline a, #fb-ix-fourth-overlay div.tagline a, #fb-ix-fifth-overlay div.tagline a, #fb-link-to-screenshot div.tagline a,
+  #fb-select-from-existing div.tagline a, #fb-dynamic-data-type div.tagline a {
+    background: #70c171;
+    color: white;
+    display: inline-block;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; }
+    #fb-resources div.tagline a:hover, #fb-to-do div.tagline a:hover, #fb-recent-activity div.tagline a:hover, #fb-project-overview div.tagline a:hover, #fb-if-then-scenario div.tagline a:hover, #fb-ix-first-overlay div.tagline a:hover,
+    #fb-ix-second-overlay div.tagline a:hover, #fb-ix-third-overlay div.tagline a:hover, #fb-ix-fourth-overlay div.tagline a:hover, #fb-ix-fifth-overlay div.tagline a:hover, #fb-link-to-screenshot div.tagline a:hover,
+    #fb-select-from-existing div.tagline a:hover, #fb-dynamic-data-type div.tagline a:hover {
+      background: #4b8a4c; }
+  #fb-resources a.done, #fb-to-do a.done, #fb-recent-activity a.done, #fb-project-overview a.done, #fb-if-then-scenario a.done, #fb-ix-first-overlay a.done,
+  #fb-ix-second-overlay a.done, #fb-ix-third-overlay a.done, #fb-ix-fourth-overlay a.done, #fb-ix-fifth-overlay a.done, #fb-link-to-screenshot a.done,
+  #fb-select-from-existing a.done, #fb-dynamic-data-type a.done {
+    background: #70c171;
+    color: white;
+    display: inline-block;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    float: right; }
+    #fb-resources a.done:hover, #fb-to-do a.done:hover, #fb-recent-activity a.done:hover, #fb-project-overview a.done:hover, #fb-if-then-scenario a.done:hover, #fb-ix-first-overlay a.done:hover,
+    #fb-ix-second-overlay a.done:hover, #fb-ix-third-overlay a.done:hover, #fb-ix-fourth-overlay a.done:hover, #fb-ix-fifth-overlay a.done:hover, #fb-link-to-screenshot a.done:hover,
+    #fb-select-from-existing a.done:hover, #fb-dynamic-data-type a.done:hover {
+      background: #4b8a4c; }
+  #fb-resources a.archive, #fb-to-do a.archive, #fb-recent-activity a.archive, #fb-project-overview a.archive, #fb-if-then-scenario a.archive, #fb-ix-first-overlay a.archive,
+  #fb-ix-second-overlay a.archive, #fb-ix-third-overlay a.archive, #fb-ix-fourth-overlay a.archive, #fb-ix-fifth-overlay a.archive, #fb-link-to-screenshot a.archive,
+  #fb-select-from-existing a.archive, #fb-dynamic-data-type a.archive {
+    display: block;
+    text-align: center;
+    margin-right: 5%; }
+  #fb-resources div.thumbnails, #fb-to-do div.thumbnails, #fb-recent-activity div.thumbnails, #fb-project-overview div.thumbnails, #fb-if-then-scenario div.thumbnails, #fb-ix-first-overlay div.thumbnails,
+  #fb-ix-second-overlay div.thumbnails, #fb-ix-third-overlay div.thumbnails, #fb-ix-fourth-overlay div.thumbnails, #fb-ix-fifth-overlay div.thumbnails, #fb-link-to-screenshot div.thumbnails,
+  #fb-select-from-existing div.thumbnails, #fb-dynamic-data-type div.thumbnails {
+    width: 615px;
+    margin: 0 auto; }
+  #fb-resources span.item, #fb-to-do span.item, #fb-recent-activity span.item, #fb-project-overview span.item, #fb-if-then-scenario span.item, #fb-ix-first-overlay span.item,
+  #fb-ix-second-overlay span.item, #fb-ix-third-overlay span.item, #fb-ix-fourth-overlay span.item, #fb-ix-fifth-overlay span.item, #fb-link-to-screenshot span.item,
+  #fb-select-from-existing span.item, #fb-dynamic-data-type span.item {
+    background: #fbfbfb;
+    border: 1px dotted #dedede;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    position: relative; }
+    #fb-resources span.item img, #fb-to-do span.item img, #fb-recent-activity span.item img, #fb-project-overview span.item img, #fb-if-then-scenario span.item img, #fb-ix-first-overlay span.item img,
+    #fb-ix-second-overlay span.item img, #fb-ix-third-overlay span.item img, #fb-ix-fourth-overlay span.item img, #fb-ix-fifth-overlay span.item img, #fb-link-to-screenshot span.item img,
+    #fb-select-from-existing span.item img, #fb-dynamic-data-type span.item img {
+      position: absolute;
+      top: 19%;
+      left: 19%; }
+    #fb-resources span.item .entypo, #fb-to-do span.item .entypo, #fb-recent-activity span.item .entypo, #fb-project-overview span.item .entypo, #fb-if-then-scenario span.item .entypo, #fb-ix-first-overlay span.item .entypo,
+    #fb-ix-second-overlay span.item .entypo, #fb-ix-third-overlay span.item .entypo, #fb-ix-fourth-overlay span.item .entypo, #fb-ix-fifth-overlay span.item .entypo, #fb-link-to-screenshot span.item .entypo,
+    #fb-select-from-existing span.item .entypo, #fb-dynamic-data-type span.item .entypo {
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      transition: all 1s;
+      opacity: 0; }
+    #fb-resources span.item .option-top-right, #fb-to-do span.item .option-top-right, #fb-recent-activity span.item .option-top-right, #fb-project-overview span.item .option-top-right, #fb-if-then-scenario span.item .option-top-right, #fb-ix-first-overlay span.item .option-top-right,
+    #fb-ix-second-overlay span.item .option-top-right, #fb-ix-third-overlay span.item .option-top-right, #fb-ix-fourth-overlay span.item .option-top-right, #fb-ix-fifth-overlay span.item .option-top-right, #fb-link-to-screenshot span.item .option-top-right,
+    #fb-select-from-existing span.item .option-top-right, #fb-dynamic-data-type span.item .option-top-right {
+      font-size: 45px;
+      position: absolute;
+      right: 7%;
+      top: 0%; }
+    #fb-resources span.item .option-bottom-right, #fb-to-do span.item .option-bottom-right, #fb-recent-activity span.item .option-bottom-right, #fb-project-overview span.item .option-bottom-right, #fb-if-then-scenario span.item .option-bottom-right, #fb-ix-first-overlay span.item .option-bottom-right,
+    #fb-ix-second-overlay span.item .option-bottom-right, #fb-ix-third-overlay span.item .option-bottom-right, #fb-ix-fourth-overlay span.item .option-bottom-right, #fb-ix-fifth-overlay span.item .option-bottom-right, #fb-link-to-screenshot span.item .option-bottom-right,
+    #fb-select-from-existing span.item .option-bottom-right, #fb-dynamic-data-type span.item .option-bottom-right {
+      font-size: 35px;
+      position: absolute;
+      right: 7%;
+      bottom: 5%; }
+    #fb-resources span.item .option-top-left, #fb-to-do span.item .option-top-left, #fb-recent-activity span.item .option-top-left, #fb-project-overview span.item .option-top-left, #fb-if-then-scenario span.item .option-top-left, #fb-ix-first-overlay span.item .option-top-left,
+    #fb-ix-second-overlay span.item .option-top-left, #fb-ix-third-overlay span.item .option-top-left, #fb-ix-fourth-overlay span.item .option-top-left, #fb-ix-fifth-overlay span.item .option-top-left, #fb-link-to-screenshot span.item .option-top-left,
+    #fb-select-from-existing span.item .option-top-left, #fb-dynamic-data-type span.item .option-top-left {
+      font-size: 35px;
+      position: absolute;
+      left: 7%;
+      top: 0%; }
+    #fb-resources span.item .option-bottom-left, #fb-to-do span.item .option-bottom-left, #fb-recent-activity span.item .option-bottom-left, #fb-project-overview span.item .option-bottom-left, #fb-if-then-scenario span.item .option-bottom-left, #fb-ix-first-overlay span.item .option-bottom-left,
+    #fb-ix-second-overlay span.item .option-bottom-left, #fb-ix-third-overlay span.item .option-bottom-left, #fb-ix-fourth-overlay span.item .option-bottom-left, #fb-ix-fifth-overlay span.item .option-bottom-left, #fb-link-to-screenshot span.item .option-bottom-left,
+    #fb-select-from-existing span.item .option-bottom-left, #fb-dynamic-data-type span.item .option-bottom-left {
+      font-size: 35px;
+      position: absolute;
+      left: 7%;
+      bottom: 5%; }
+    #fb-resources span.item .option-gold-hover:hover, #fb-to-do span.item .option-gold-hover:hover, #fb-recent-activity span.item .option-gold-hover:hover, #fb-project-overview span.item .option-gold-hover:hover, #fb-if-then-scenario span.item .option-gold-hover:hover, #fb-ix-first-overlay span.item .option-gold-hover:hover,
+    #fb-ix-second-overlay span.item .option-gold-hover:hover, #fb-ix-third-overlay span.item .option-gold-hover:hover, #fb-ix-fourth-overlay span.item .option-gold-hover:hover, #fb-ix-fifth-overlay span.item .option-gold-hover:hover, #fb-link-to-screenshot span.item .option-gold-hover:hover,
+    #fb-select-from-existing span.item .option-gold-hover:hover, #fb-dynamic-data-type span.item .option-gold-hover:hover {
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      transition: all 0.8s;
+      color: #FF0;
+      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66); }
+    #fb-resources span.item:hover .entypo, #fb-to-do span.item:hover .entypo, #fb-recent-activity span.item:hover .entypo, #fb-project-overview span.item:hover .entypo, #fb-if-then-scenario span.item:hover .entypo, #fb-ix-first-overlay span.item:hover .entypo,
+    #fb-ix-second-overlay span.item:hover .entypo, #fb-ix-third-overlay span.item:hover .entypo, #fb-ix-fourth-overlay span.item:hover .entypo, #fb-ix-fifth-overlay span.item:hover .entypo, #fb-link-to-screenshot span.item:hover .entypo,
+    #fb-select-from-existing span.item:hover .entypo, #fb-dynamic-data-type span.item:hover .entypo {
+      display: inline-block;
+      opacity: 1; }
+  #fb-resources ul.platform, #fb-to-do ul.platform, #fb-recent-activity ul.platform, #fb-project-overview ul.platform, #fb-if-then-scenario ul.platform, #fb-ix-first-overlay ul.platform,
+  #fb-ix-second-overlay ul.platform, #fb-ix-third-overlay ul.platform, #fb-ix-fourth-overlay ul.platform, #fb-ix-fifth-overlay ul.platform, #fb-link-to-screenshot ul.platform,
+  #fb-select-from-existing ul.platform, #fb-dynamic-data-type ul.platform {
+    padding-right: 17px;
+    border-right: 1px solid #e0e0e0;
+    box-shadow: 1px 0px #e0e0e0; }
+    #fb-resources ul.platform li, #fb-to-do ul.platform li, #fb-recent-activity ul.platform li, #fb-project-overview ul.platform li, #fb-if-then-scenario ul.platform li, #fb-ix-first-overlay ul.platform li,
+    #fb-ix-second-overlay ul.platform li, #fb-ix-third-overlay ul.platform li, #fb-ix-fourth-overlay ul.platform li, #fb-ix-fifth-overlay ul.platform li, #fb-link-to-screenshot ul.platform li,
+    #fb-select-from-existing ul.platform li, #fb-dynamic-data-type ul.platform li {
+      position: relative;
+      background: #e0e0e0;
+      margin-bottom: 5px;
+      height: 50px; }
+      #fb-resources ul.platform li a, #fb-to-do ul.platform li a, #fb-recent-activity ul.platform li a, #fb-project-overview ul.platform li a, #fb-if-then-scenario ul.platform li a, #fb-ix-first-overlay ul.platform li a,
+      #fb-ix-second-overlay ul.platform li a, #fb-ix-third-overlay ul.platform li a, #fb-ix-fourth-overlay ul.platform li a, #fb-ix-fifth-overlay ul.platform li a, #fb-link-to-screenshot ul.platform li a,
+      #fb-select-from-existing ul.platform li a, #fb-dynamic-data-type ul.platform li a {
+        text-decoration: none;
+        background: none; }
+        #fb-resources ul.platform li a span, #fb-to-do ul.platform li a span, #fb-recent-activity ul.platform li a span, #fb-project-overview ul.platform li a span, #fb-if-then-scenario ul.platform li a span, #fb-ix-first-overlay ul.platform li a span,
+        #fb-ix-second-overlay ul.platform li a span, #fb-ix-third-overlay ul.platform li a span, #fb-ix-fourth-overlay ul.platform li a span, #fb-ix-fifth-overlay ul.platform li a span, #fb-link-to-screenshot ul.platform li a span,
+        #fb-select-from-existing ul.platform li a span, #fb-dynamic-data-type ul.platform li a span {
+          position: absolute;
+          left: 55px;
+          top: 17px; }
+
+#fb-to-do span.numbers, #fb-recent-activity span.numbers {
+  display: inline-block;
+  background: #70c171;
+  color: white;
+  width: 45px;
+  text-align: center;
+  padding: 13px 0px;
+  font-weight: normal;
+  font-size: 14px;
+  height: 18px;
+  margin: 0px;
+  vertical-align: middle; }
+#fb-to-do span.initials, #fb-recent-activity span.initials {
+  display: inline-block; }
+#fb-to-do span.right-text, #fb-recent-activity span.right-text {
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  width: 80%;
+  height: 36px;
+  overflow: hidden;
+  white-space: nowrap;
+  white-space: normal; }
+#fb-to-do li, #fb-recent-activity li {
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 4px;
+  margin: 0; }
+#fb-to-do p, #fb-recent-activity p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  text-overflow: ellipsis; }
+#fb-to-do p.datetime, #fb-recent-activity p.datetime {
+  color: gray; }
+#fb-to-do div.tagline p, #fb-recent-activity div.tagline p {
+  display: block;
+  width: 94%;
+  text-align: center; }
+
+#fb-to-do li {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  #fb-to-do li div {
+    display: none;
+    position: absolute;
+    right: 3%;
+    top: 20%;
+    background: white;
+    height: 30px;
+    width: 30px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 100px; }
+    #fb-to-do li div .entypo {
+      font-size: 50px;
+      text-align: center;
+      display: block;
+      position: relative;
+      bottom: 10px;
+      color: #7a786c !important; }
+  #fb-to-do li:hover div {
+    display: inline-block; }
+  #fb-to-do li:hover .entypo {
+    opacity: 1; }
+
+#fb-project-overview, #fb-ix-first-overlay, #fb-ix-second-overlay, #fb-ix-third-overlay, #fb-ix-fourth-overlay {
+  width: 600px; }
+  #fb-project-overview div, #fb-ix-first-overlay div, #fb-ix-second-overlay div, #fb-ix-third-overlay div, #fb-ix-fourth-overlay div {
+    display: inline-block;
+    vertical-align: top; }
+    #fb-project-overview div:nth-child(even), #fb-ix-first-overlay div:nth-child(even), #fb-ix-second-overlay div:nth-child(even), #fb-ix-third-overlay div:nth-child(even), #fb-ix-fourth-overlay div:nth-child(even) {
+      width: 34%; }
+    #fb-project-overview div:nth-child(odd), #fb-ix-first-overlay div:nth-child(odd), #fb-ix-second-overlay div:nth-child(odd), #fb-ix-third-overlay div:nth-child(odd), #fb-ix-fourth-overlay div:nth-child(odd) {
+      width: 62%; }
+      #fb-project-overview div:nth-child(odd) h2, #fb-ix-first-overlay div:nth-child(odd) h2, #fb-ix-second-overlay div:nth-child(odd) h2, #fb-ix-third-overlay div:nth-child(odd) h2, #fb-ix-fourth-overlay div:nth-child(odd) h2 {
+        padding-left: 1em; }
+  #fb-project-overview div.thumbnails, #fb-ix-first-overlay div.thumbnails, #fb-ix-second-overlay div.thumbnails, #fb-ix-third-overlay div.thumbnails, #fb-ix-fourth-overlay div.thumbnails {
+    width: 615px;
+    margin: 0 auto; }
+  #fb-project-overview span.item, #fb-ix-first-overlay span.item, #fb-ix-second-overlay span.item, #fb-ix-third-overlay span.item, #fb-ix-fourth-overlay span.item {
+    background: #fbfbfb;
+    border: 1px dotted #dedede;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    position: relative; }
+    #fb-project-overview span.item img, #fb-ix-first-overlay span.item img, #fb-ix-second-overlay span.item img, #fb-ix-third-overlay span.item img, #fb-ix-fourth-overlay span.item img {
+      position: absolute;
+      top: 19%;
+      left: 19%; }
+    #fb-project-overview span.item .entypo, #fb-ix-first-overlay span.item .entypo, #fb-ix-second-overlay span.item .entypo, #fb-ix-third-overlay span.item .entypo, #fb-ix-fourth-overlay span.item .entypo {
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      transition: all 1s;
+      opacity: 0; }
+    #fb-project-overview span.item .option-top-right, #fb-ix-first-overlay span.item .option-top-right, #fb-ix-second-overlay span.item .option-top-right, #fb-ix-third-overlay span.item .option-top-right, #fb-ix-fourth-overlay span.item .option-top-right {
+      font-size: 45px;
+      position: absolute;
+      right: 7%;
+      top: 0%; }
+    #fb-project-overview span.item .option-bottom-right, #fb-ix-first-overlay span.item .option-bottom-right, #fb-ix-second-overlay span.item .option-bottom-right, #fb-ix-third-overlay span.item .option-bottom-right, #fb-ix-fourth-overlay span.item .option-bottom-right {
+      font-size: 35px;
+      position: absolute;
+      right: 7%;
+      bottom: 5%; }
+    #fb-project-overview span.item .option-top-left, #fb-ix-first-overlay span.item .option-top-left, #fb-ix-second-overlay span.item .option-top-left, #fb-ix-third-overlay span.item .option-top-left, #fb-ix-fourth-overlay span.item .option-top-left {
+      font-size: 35px;
+      position: absolute;
+      left: 7%;
+      top: 0%; }
+    #fb-project-overview span.item .option-bottom-left, #fb-ix-first-overlay span.item .option-bottom-left, #fb-ix-second-overlay span.item .option-bottom-left, #fb-ix-third-overlay span.item .option-bottom-left, #fb-ix-fourth-overlay span.item .option-bottom-left {
+      font-size: 35px;
+      position: absolute;
+      left: 7%;
+      bottom: 5%; }
+    #fb-project-overview span.item .option-gold-hover:hover, #fb-ix-first-overlay span.item .option-gold-hover:hover, #fb-ix-second-overlay span.item .option-gold-hover:hover, #fb-ix-third-overlay span.item .option-gold-hover:hover, #fb-ix-fourth-overlay span.item .option-gold-hover:hover {
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      transition: all 0.8s;
+      color: #FF0;
+      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66); }
+    #fb-project-overview span.item:hover .entypo, #fb-ix-first-overlay span.item:hover .entypo, #fb-ix-second-overlay span.item:hover .entypo, #fb-ix-third-overlay span.item:hover .entypo, #fb-ix-fourth-overlay span.item:hover .entypo {
+      display: inline-block;
+      opacity: 1; }
+  #fb-project-overview div.thumbnails, #fb-ix-first-overlay div.thumbnails, #fb-ix-second-overlay div.thumbnails, #fb-ix-third-overlay div.thumbnails, #fb-ix-fourth-overlay div.thumbnails {
+    width: 96%;
+    margin-left: 10px; }
+    #fb-project-overview div.thumbnails span.item img, #fb-ix-first-overlay div.thumbnails span.item img, #fb-ix-second-overlay div.thumbnails span.item img, #fb-ix-third-overlay div.thumbnails span.item img, #fb-ix-fourth-overlay div.thumbnails span.item img {
+      top: 14%;
+      left: 31%; }
+
+#fb-ix-first-overlay, #fb-ix-second-overlay, #fb-ix-third-overlay, #fb-ix-fourth-overlay {
+  width: 640px; }
+  #fb-ix-first-overlay div, #fb-ix-second-overlay div, #fb-ix-third-overlay div, #fb-ix-fourth-overlay div {
+    /* The reason for so many nth child selectors is to avoid having
+     To write so many classes.  These nth-child classes are just trying
+     to more precisely layout and organize the ix screens to more closely
+     match the mock ups */ }
+    #fb-ix-first-overlay div:nth-child(3), #fb-ix-second-overlay div:nth-child(3), #fb-ix-third-overlay div:nth-child(3), #fb-ix-fourth-overlay div:nth-child(3) {
+      margin-top: 3px; }
+      #fb-ix-first-overlay div:nth-child(3) a.view-all:last-of-type, #fb-ix-second-overlay div:nth-child(3) a.view-all:last-of-type, #fb-ix-third-overlay div:nth-child(3) a.view-all:last-of-type, #fb-ix-fourth-overlay div:nth-child(3) a.view-all:last-of-type {
+        margin-left: 197px;
+        position: relative;
+        left: 12px; }
+    #fb-ix-first-overlay div:nth-child(4), #fb-ix-second-overlay div:nth-child(4), #fb-ix-third-overlay div:nth-child(4), #fb-ix-fourth-overlay div:nth-child(4) {
+      border-right: 1px solid #e0e0e0;
+      box-shadow: 1px 0px #e0e0e0;
+      padding-right: 9px; }
+    #fb-ix-first-overlay div:nth-child(5) textarea, #fb-ix-second-overlay div:nth-child(5) textarea, #fb-ix-third-overlay div:nth-child(5) textarea, #fb-ix-fourth-overlay div:nth-child(5) textarea {
+      margin: 0 0 0 16px; }
+  #fb-ix-first-overlay div.header, #fb-ix-second-overlay div.header, #fb-ix-third-overlay div.header, #fb-ix-fourth-overlay div.header {
+    margin-bottom: 13px; }
+    #fb-ix-first-overlay div.header:last-of-type h2, #fb-ix-second-overlay div.header:last-of-type h2, #fb-ix-third-overlay div.header:last-of-type h2, #fb-ix-fourth-overlay div.header:last-of-type h2 {
+      padding-left: 23px; }
+  #fb-ix-first-overlay a.add, #fb-ix-second-overlay a.add, #fb-ix-third-overlay a.add, #fb-ix-fourth-overlay a.add {
+    color: white;
+    background: #70c171;
+    border-color: #70c171;
+    font-size: 35px;
+    padding: 0px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    top: 0; }
+    #fb-ix-first-overlay a.add:hover, #fb-ix-second-overlay a.add:hover, #fb-ix-third-overlay a.add:hover, #fb-ix-fourth-overlay a.add:hover {
+      background: #4b8a4c; }
+  #fb-ix-first-overlay a.custom-action, #fb-ix-second-overlay a.custom-action, #fb-ix-third-overlay a.custom-action, #fb-ix-fourth-overlay a.custom-action {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    text-decoration: none;
+    height: 35px;
+    background: #5dace1;
+    color: white; }
+    #fb-ix-first-overlay a.custom-action span.entypo, #fb-ix-second-overlay a.custom-action span.entypo, #fb-ix-third-overlay a.custom-action span.entypo, #fb-ix-fourth-overlay a.custom-action span.entypo {
+      font-size: 32px;
+      padding-left: 12px;
+      position: relative;
+      top: 2px;
+      right: 3px; }
+    #fb-ix-first-overlay a.custom-action span.action-text, #fb-ix-second-overlay a.custom-action span.action-text, #fb-ix-third-overlay a.custom-action span.action-text, #fb-ix-fourth-overlay a.custom-action span.action-text {
+      padding-top: 8px;
+      padding-right: 14px; }
+  #fb-ix-first-overlay ul.user-action li, #fb-ix-second-overlay ul.user-action li, #fb-ix-third-overlay ul.user-action li, #fb-ix-fourth-overlay ul.user-action li {
+    display: inline-block;
+    width: 32.1%;
+    margin: 4px 0 4px 0; }
+    #fb-ix-first-overlay ul.user-action li a, #fb-ix-second-overlay ul.user-action li a, #fb-ix-third-overlay ul.user-action li a, #fb-ix-fourth-overlay ul.user-action li a {
+      padding: 10px 10px 10px 10px;
+      border-radius: 100%;
+      display: block;
+      text-align: center;
+      height: 22px;
+      width: 22px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #FFF;
+      background: #fcb45e;
+      font-size: 16px; }
+  #fb-ix-first-overlay a.gray, #fb-ix-second-overlay a.gray, #fb-ix-third-overlay a.gray, #fb-ix-fourth-overlay a.gray {
+    background: #b5b5b5; }
+  #fb-ix-first-overlay .text-square, #fb-ix-second-overlay .text-square, #fb-ix-third-overlay .text-square, #fb-ix-fourth-overlay .text-square {
+    background: #e0e0e0;
+    text-align: center;
+    height: 85px;
+    width: 85px;
+    display: inline-block;
+    vertical-align: top;
+    margin: .75em;
+    font-weight: bold; }
+    #fb-ix-first-overlay .text-square b, #fb-ix-second-overlay .text-square b, #fb-ix-third-overlay .text-square b, #fb-ix-fourth-overlay .text-square b {
+      display: block;
+      margin-top: 29px; }
+
+#fb-ix-third-overlay, #fb-ix-fourth-overlay {
+  width: 600px; }
+
+#fb-ix-fourth-overlay span.box {
+  background: #f9f9f9;
+  border: 1px dotted #eae9e9;
+  height: 120px;
+  width: 120px;
+  display: inline-block; }
+#fb-ix-fourth-overlay div:nth-child(3) a.view-all:last-of-type {
+  margin-left: 99px; }
+
+#fb-ix-fifth-overlay {
+  width: 610px; }
+  #fb-ix-fifth-overlay div.thumbnails {
+    width: 615px;
+    margin: 0 auto; }
+  #fb-ix-fifth-overlay span.item {
+    background: #fbfbfb;
+    border: 1px dotted #dedede;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    position: relative; }
+    #fb-ix-fifth-overlay span.item img {
+      position: absolute;
+      top: 19%;
+      left: 19%; }
+    #fb-ix-fifth-overlay span.item .entypo {
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      transition: all 1s;
+      opacity: 0; }
+    #fb-ix-fifth-overlay span.item .option-top-right {
+      font-size: 45px;
+      position: absolute;
+      right: 7%;
+      top: 0%; }
+    #fb-ix-fifth-overlay span.item .option-bottom-right {
+      font-size: 35px;
+      position: absolute;
+      right: 7%;
+      bottom: 5%; }
+    #fb-ix-fifth-overlay span.item .option-top-left {
+      font-size: 35px;
+      position: absolute;
+      left: 7%;
+      top: 0%; }
+    #fb-ix-fifth-overlay span.item .option-bottom-left {
+      font-size: 35px;
+      position: absolute;
+      left: 7%;
+      bottom: 5%; }
+    #fb-ix-fifth-overlay span.item .option-gold-hover:hover {
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      transition: all 0.8s;
+      color: #FF0;
+      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66); }
+    #fb-ix-fifth-overlay span.item:hover .entypo {
+      display: inline-block;
+      opacity: 1; }
+  #fb-ix-fifth-overlay div.tagline p {
+    width: auto; }
+  #fb-ix-fifth-overlay div.thumbnails {
+    width: 100%;
+    margin: 0; }
+    #fb-ix-fifth-overlay div.thumbnails span.item {
+      width: 147px;
+      height: 147px; }
+
+#fb-if-then-scenario {
+  width: 360px; }
+  #fb-if-then-scenario textarea {
+    border: 1px dotted #dedede;
+    background: #e0e0e0;
+    margin: 1em 0em; }
+
+/* Overlays for screenshot on left and cards on right */
+#fb-link-to-screenshot, #fb-select-from-existing {
+  width: 1000px; }
+  #fb-link-to-screenshot article, #fb-select-from-existing article {
+    width: 48.5%;
+    display: inline-block;
+    vertical-align: top; }
+    #fb-link-to-screenshot article span, #fb-select-from-existing article span {
+      border-right: 1px solid #e4e4e4;
+      display: inline-block;
+      padding-right: 18px; }
+      #fb-link-to-screenshot article span div.box, #fb-select-from-existing article span div.box {
+        background: #f9f9f9;
+        border: 1px dotted #eae9e9;
+        width: 450px;
+        height: 450px;
+        display: block; }
+    #fb-link-to-screenshot article div.tagline, #fb-select-from-existing article div.tagline {
+      margin-bottom: 1em; }
+      #fb-link-to-screenshot article div.tagline a.done, #fb-select-from-existing article div.tagline a.done {
+        margin: 0 0 0 4px;
+        float: none;
+        vertical-align: top; }
+      #fb-link-to-screenshot article div.tagline p, #fb-select-from-existing article div.tagline p {
+        margin: 0;
+        padding: 10px 1em;
+        width: auto; }
+    #fb-link-to-screenshot article aside div, #fb-select-from-existing article aside div {
+      width: 157px;
+      height: 157px;
+      display: inline-block; }
+
+#fb-select-from-existing aside div u, #fb-select-from-existing aside div p, #fb-select-from-existing aside div strong {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0px 0px 0px;
+  color: #919191; }
+#fb-select-from-existing aside div u {
+  margin-top: 30px; }
+
+#fb-dynamic-data-type {
+  width: 900px; }
+  #fb-dynamic-data-type input {
+    width: 440px;
+    background: #e0e0e0; }
+  #fb-dynamic-data-type textarea {
+    margin-left: 0em; }
+  #fb-dynamic-data-type a.view-all {
+    font-size: 15px;
+    margin-left: 5px; }
+  #fb-dynamic-data-type a:not(.view-all) {
+    background: #f9f9f9;
+    border: 1px dotted #eae9e9;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    padding: 0.75em;
+    display: inline-block;
+    text-decoration: none;
+    height: 17px; }
+    #fb-dynamic-data-type a:not(.view-all):nth-of-type(2) {
+      margin-right: 2em; }
+    #fb-dynamic-data-type a:not(.view-all):hover {
+      background: #326587;
+      color: white; }
+  #fb-dynamic-data-type div.squares a {
+    margin: 0;
+    width: 15px;
+    height: 17px;
+    text-align: center; }
+    #fb-dynamic-data-type div.squares a:nth-of-type(2) {
+      margin-right: 0; }
+
+/* Javascript related classes */
+.fancybox-close {
+  background-color: rgba(255, 0, 0, 0); }
+
+.fancybox-skin {
+  background-color: #fbfbfb !important; }
+
+.clickOverlayText {
+  position: absolute;
+  display: block;
+  width: 67%;
+  margin-left: 10%;
+  text-align: center;
+  top: 41%;
+  border-radius: 10em;
+  background: rgba(0, 0, 0, 0.64);
+  color: #FFF;
+  font-weight: 300;
+  padding: .5em 1em;
+  font-size: 14px; }
+
+/* Login screen related classes */
+body.login {
+  background: #f7f7f7; }
+  body.login header {
+    margin-top: 2em;
+    color: #bfbfbf; }
+    body.login header h1 {
+      font-weight: normal;
+      margin-left: 0px;
+      margin-bottom: 6px;
+      font-size: 24px; }
+      body.login header h1 b {
+        font-size: 27px;
+        color: #7f7f7f; }
+    body.login header a {
+      margin-left: 184px;
+      text-decoration: none;
+      font-size: 20px; }
+      body.login header a strong {
+        text-decoration: underline;
+        color: #7f7f7f; }
+  body.login div.white-background {
+    background: white;
+    padding: 2em 2em 0.5em 2em; }
+  body.login article, body.login aside {
+    display: inline-block;
+    background: white;
+    vertical-align: top; }
+  body.login article {
+    width: 55%; }
+    body.login article h1 {
+      color: black;
+      margin: 0; }
+    body.login article h2 {
+      margin-bottom: 5px; }
+    body.login article input {
+      width: 330px; }
+    body.login article a.view-all {
+      margin-left: 4px;
+      font-size: 16px; }
+    body.login article a.done {
+      background: #70c171;
+      color: white;
+      display: inline-block;
+      padding: 10px 35px;
+      text-decoration: none;
+      margin-left: 12px;
+      font-weight: bold;
+      font-size: 14px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+      margin: 1em 1em 1em 199px;
+      padding: 0.8em 45px; }
+      body.login article a.done:hover {
+        background: #4b8a4c; }
+  body.login aside {
+    width: 44%;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 0em 0em 1em 0em;
+    height: 272px;
+    clear: both;
+    overflow: hidden; }
+    body.login aside p {
+      margin: 0.5em 1em; }
+      body.login aside p:last-of-type {
+        margin-bottom: 0; }
+    body.login aside a.entypo {
+      font-size: 103px; }
+    body.login aside h3 {
+      margin-top: 0em; }
+  body.login div.login-buttons {
+    margin-top: 1px; }
+    body.login div.login-buttons div.white-background {
+      padding-bottom: 2em;
+      padding-top: 1em; }
+    body.login div.login-buttons section {
+      padding-top: 10px; }
+      body.login div.login-buttons section a {
+        text-decoration: none;
+        padding: 0.5em 1em;
+        font-weight: bold; }
+        body.login div.login-buttons section a:first-of-type {
+          background: #e0e0e0;
+          color: #7f7f7f;
+          margin-left: 30px; }
+        body.login div.login-buttons section a:last-of-type {
+          background: #b5b5b5;
+          color: white;
+          padding: 0.5em 63px;
+          margin-left: 19px; }
+      body.login div.login-buttons section span {
+        color: #bfbfbf;
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 0%;
+        margin-left: 2.5%; }
+  body.login footer h4 {
+    text-align: center;
+    font-weight: normal;
+    color: #bfbfbf; }
+    body.login footer h4 strong {
+      font-weight: bold;
+      color: #7f7f7f; }
+  body.login footer div.companies {
+    margin: 0 auto;
+    width: 415px; }
+    body.login footer div.companies img {
+      width: 200px;
+      height: auto; }
+
+body.sign-up main h1 {
+  display: block;
+  margin: 0; }
+body.sign-up main article {
+  width: 48%;
+  position: relative;
+  left: 4px; }
+  body.sign-up main article input {
+    width: 300px; }
+  body.sign-up main article a.done {
+    margin: 1em 0em;
+    width: 210px;
+    display: block;
+    text-align: center; }
+  body.sign-up main article:last-of-type {
+    margin-left: 21px; }
+body.sign-up div.login-buttons section a:last-of-type {
+  padding: 0.5em 72px;
+  margin-left: 40px; }
+
+body.forgot aside {
+  height: 232px;
+  margin-bottom: 1.5em; }
+  body.forgot aside h3 {
+    text-align: left;
+    padding: 1em 1em 0em 1em; }
+body.forgot article input {
+  width: 336px; }

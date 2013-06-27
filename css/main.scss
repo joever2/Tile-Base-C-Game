@@ -1,0 +1,1532 @@
+@import 'bourbon/bourbon';
+
+@include font-face(entypo, './entypo/entypo');
+
+// Color variables
+
+$green: #70c171;
+$dark-green: #4B8A4C;
+$orange: #ff6600;
+$faded-orange:#fcb45e;
+$light-blue:#deecf6;
+$blue:#5dace1;
+$dark-blue: #326587;
+$light-gray: #e0e0e0;
+
+// For use with initial blocks, such as PG JV DP etc.
+$initial-light-gray:#fbfbfb;
+$initial-dark-gray: #f5f5f5;
+
+// Repeated blocks of css
+//
+// @mixin hover-controls is meant for two controls to show up on hover.
+// This mixin is typically used on div items in a grid.
+// The exact positioning of each of the icons has to do with the class.
+
+@mixin hover-controls {
+	position:relative;
+			.entypo {
+			@include transition (all 1.0s);
+			opacity: 0;
+		}
+		.option-top-right {
+			font-size: 45px;
+			position: absolute;
+			right: 7%;
+			top: 0%;
+		}
+
+		.option-bottom-right {
+			font-size:35px;
+			position: absolute;
+			right: 7%;
+			bottom: 5%;
+		}
+
+		.option-top-left {
+			font-size:35px;
+			position: absolute;
+			left: 7%;
+			top: 0%;
+		}
+
+		.option-bottom-left {
+			font-size:35px;
+			position:absolute;
+			left:7%;
+			bottom:5%;
+		}
+		.option-gold-hover {
+			&:hover {
+				@include transition (all 0.8s);
+				color: #FF0;
+				text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.66);
+			}
+		}
+		&:hover {
+			.entypo {
+				display:inline-block;
+				opacity: 1;
+			}
+		}
+}
+
+// @mixin ellipsis is for creating an ellipsis.
+// You have to specify the width and height in its arguments.
+
+
+@mixin ellipsis ($width, $height) {
+	text-overflow:ellipsis;
+	width:$width;
+	height:$height;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+// @mixin green-plus is for green add button
+// $size is an argument for how many pixels large
+// This is only for single line ellipsis
+
+@mixin green-plus ($size) {
+	color:white;
+	background:$green;
+	border-color:$green;
+	font-size: $size;
+	padding: 0px;
+	height: $size;
+	width:$size;
+	position: relative;
+	top: 5px;
+	text-align: center;
+	cursor:pointer;
+	&:hover {
+		background:$dark-green;
+	}
+}
+
+// @mixin divEmpty is to create a green plus that is centered
+// both vertically and horizotnally under whatever it is nested under
+// Throughout the html is placed under div.empty just so there might need
+// to be any slight modifications.
+
+@mixin divEmpty ($size) {
+	position:relative;
+	top:0;
+	left:0;
+	.entypo {
+		display:inline-block;
+		opacity: 1;
+		@include green-plus ($size);
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-top:$size/-2;
+		margin-left:$size/-2;
+	}
+}
+
+// @mixin green-button is the green button seen commonly on overlays
+// Should be styled after to ensure right size
+
+@mixin green-button {
+	background: $green;
+	color:white;
+	display: inline-block;
+	padding: 10px 35px;
+	text-decoration: none;
+	margin-left: 12px;
+	font-weight: bold;
+	font-size:14px;
+	@include transition (all 0.5s);
+	&:hover {
+		background:$dark-green;
+	}
+}
+
+
+// @mixin card background is for the correct background/border combination
+// for when cards are displayed
+
+@mixin card-background {
+	background:#f9f9f9;
+	border: 1px dotted #eae9e9;
+}
+
+// @mixin leftBox-rightText is to create green boxes on left
+// and text on right layout.  Must be nested under an ul.
+
+@mixin leftBox-rightText {
+	span.numbers {
+		display: inline-block;
+		background: #70c171;
+		color: white;
+		width: 45px;
+		text-align: center;
+		padding: 13px 0px;
+		font-weight: normal;
+		font-size:14px;
+		height:18px;
+		margin: 0px;
+		vertical-align: middle;
+	}
+	span.initials {
+		display: inline-block;
+	}
+	span.right-text {
+		display: inline-block;
+		vertical-align: middle;
+		@include ellipsis (80%, 36px);
+		white-space: normal;
+	}
+	li {
+		height:50px;
+		margin-bottom:10px;
+		padding:4px;
+		margin:0;
+	}
+	p {
+		margin: 0px;
+		padding:0px;
+		font-size: 15px;
+		text-overflow: ellipsis;
+	}
+
+	p.datetime {
+		color: gray;
+	}
+}
+
+// @mixin-thumbnail-items is meant for a html structure of 
+// div.thumbnails > span.item > img.
+
+@mixin thumbnail-items ($itemSize) {
+	div.thumbnails {
+		width: 615px;
+		margin: 0 auto;
+	}
+
+	span.item {
+		background:$initial-light-gray;
+		border: 1px dotted #dedede;
+		width:$itemSize;
+		height:$itemSize;
+		display:inline-block;
+		img {
+			position: absolute;
+			top: 19%;
+			left: 19%;
+		}
+		@include hover-controls;
+	}
+}
+
+// @mixin four-numbers is meant for the display of 
+// Will be often paired with the four components of the application
+// IE DD, IX, IF, UI.  The active class is used to highlight to the user
+// the current tab they are visiting
+
+@mixin four-numbers {
+	ul li {
+			display: inline-block;
+			width: 33px;
+			height: 27px;
+			text-align: center;
+			padding-top: 8px;
+	}
+	ul.numbers{
+		padding-bottom:0px;
+		margin-bottom:0px;
+		li {
+			background: $light-gray;
+			margin-bottom:0px;
+		}
+		li.active {
+			background:$dark-blue;
+			color:white;
+			font-weight:bold;
+			padding-top: 7px;
+		}
+	} 
+	ul.components {
+		margin-top:0;
+		li.active {
+			color:#919191;
+			font-weight:bold;
+		}
+	}
+}
+
+// @mixin circle-hover creates round delete circle that appears 
+// commonly on to-do listing.  Can be modified in terms of positioning
+// HTML must be set up as ul>li>div>span.entypo for the icons to render
+// correctly and this must be inside each li
+
+@mixin circle-hover ($right, $top) {
+	position:relative;
+	top:0;
+	left:0;
+	@include transition (all 0.3s);
+	div {
+		display:none;
+		position:absolute;
+		right: $right;
+		top: $top;
+		background: white;
+		height: 30px;
+		width: 30px;
+		overflow-y:hidden;
+		overflow-x:hidden;
+		border-radius:100px; 
+		.entypo {
+			font-size: 50px;
+			text-align: center;
+			display: block;
+			position: relative;
+			bottom: 10px;
+			color: #7a786c !important;
+		}
+	}
+	&:hover {
+		div {
+			display: inline-block;	
+		}
+		.entypo {
+			opacity: 1;
+		}
+	}
+}
+
+body {
+	font-family: $helvetica;
+	color:#919191;
+	background-color:#fbfbfb;
+}
+
+a {
+	color:#919191;
+	background-color:none;
+}
+
+h1, h2 {
+	display:inline-block;
+	font-size: 1.2em;
+	margin-bottom: 0px;
+}
+
+h1 {
+	margin-top: 36px;
+	margin-left: 23px;
+	font-size: 21px;
+}
+
+.orange-link {
+	@include transition (all 0.5s);
+	&:hover {
+		color:$orange;
+	} 
+}
+
+a.project-link {
+	background: #fbfbfb;
+	border: 1px solid $light-gray;
+	padding: 10px 40px 11px 16px;
+}
+
+h2 {
+	color:#7f7f7f;
+}
+
+ul {
+	list-style-type: none;
+	padding-left:0px;
+}
+
+.entypo {
+	font-family: "entypo";
+	text-decoration:none;
+	background:none;
+	cursor:pointer;
+}
+
+a.view-all {
+	font-size: 14px;
+	margin-left: 2px;
+	@extend .orange-link;
+}
+
+/* Form elements */
+
+#{$all-text-inputs} {
+	@include transition (box-shadow 0.5s);
+	outline:0px !important;
+    -webkit-appearance:none;
+	border: 1px dotted #dedede;
+	background:$initial-dark-gray;
+	font-size:18px;
+	padding: 1em;
+}
+
+#{$all-text-inputs-hover} {
+	box-shadow: 0px 0px 3px $dark-blue;
+	outline:0px !important;
+    -webkit-appearance:none;
+}
+
+#{$all-text-inputs-focus} {
+	box-shadow: 0px 0px 5px $dark-blue;
+		outline:0px !important;
+    -webkit-appearance:none;
+}
+
+textarea {
+	border: none;
+	background: $light-gray;
+	margin: 1em;
+	padding:1em;
+	@include transition (box-shadow 0.5s);
+	outline:0px !important;
+    -webkit-appearance:none;
+	border: 1px dotted #dedede;
+	&:hover {
+		box-shadow: 0px 0px 3px $dark-blue;
+		outline:0px !important;
+	    -webkit-appearance:none;
+	}
+	&:focus {
+		box-shadow: 0px 0px 5px $dark-blue;
+		outline:0px !important;
+    	-webkit-appearance:none;
+	}
+}
+
+/* Header for main application */
+
+header {
+	.primary-link {
+		span {
+			display: block;
+			margin-top: 42px;
+			height: 53px;
+			width: 460px;
+
+			img {
+				display: inline-block;
+			}
+			h1 {
+				margin-top: 0px;
+				display: inline-block;
+				vertical-align: top;
+				font-size: 21px;
+				margin-left: 0px;
+				position: relative;
+				bottom: 4px;
+			}
+
+			h2 {
+				display: block;
+				font-size: 18px;
+				font-weight: normal;
+				position: absolute;
+				top: 55%;
+				left: 25%;
+			}
+
+			a.screen-number {
+				background: $light-gray;
+				padding: .5em .75em;
+				font-size: 12px;
+				text-decoration: none;
+				position: absolute;
+				left: 25%;
+				top: 69%;
+			}
+			p {
+				position: absolute;
+				display: inline;
+				left: 31%;
+				margin: 0;
+				padding: 0;
+				top: 74%;
+			}
+			a.user {
+				width: 50px;
+				height: 34px;
+				background: #b5b5b5;
+				display: inline-block;
+				font-weight: bold;
+				border: 0;
+				vertical-align: middle;
+				text-align: center;
+				color: white;
+				padding-top: 16px;
+				text-decoration:none;
+			}
+		}
+	}
+
+	p {
+		display: inline-block;
+		margin-top: 51px;
+		margin-left: 121px;
+		font-size:14px;	
+	}
+
+	.login {
+		width:540px;
+		height:112px;
+		span {
+			position: absolute;
+			top: 20px;
+			left: 370px;
+			font-size: 15px;			
+		}
+
+		.entypo {
+			@include green-button;
+			margin:0;
+			font-size: 38px;
+			padding: 0px 10px 0px 10px;
+			font-weight: normal;
+			position: relative;
+			vertical-align: middle;
+			bottom: 1px;
+			}
+	}
+}
+
+span.initials {
+  color: black;
+  font-weight:bold;
+  background: $initial-light-gray;
+  display: inline-block;
+  width: 45px;
+  text-align: center;
+  padding: 13px 0px;
+  margin: 1px;
+  border: 1px #c1c1c1 solid;
+  cursor:pointer;
+}
+
+span.initials.entypo {
+	@include green-plus (45px);
+}
+
+span.initials.leader {
+	background: $initial-dark-gray;
+}
+
+//  Above are more global styles
+//  Below are styles that are generally in div/section modules
+//
+
+nav {
+	height:37px;
+	a {
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	a.main-nav {
+		background:$dark-blue;
+		color:white;
+		padding: 0.5em 1em;
+		font-size: 17px;
+		text-decoration: none;
+	}
+
+	margin-bottom:10px;
+
+	a.comments {
+		@include green-button;
+		float: right;
+		margin-top: 10px;
+		font-weight: normal;
+		margin: 2px 10px 0 0;
+	}
+}
+
+section.members {
+	ul li {
+		display:inline-block;
+	}
+}
+
+section.recent-activity, section.to-do {
+	display: block;
+	vertical-align:top;
+
+	p {
+		margin: 0px;
+		padding:0px;
+		font-size: 15px;
+	}
+
+
+
+	li {
+		height:58px;
+	}
+
+	p.datetime {
+		color: gray;
+	}
+	
+	span.numbers {
+		display: inline-block;
+		background: #70c171;
+		color: white;
+		width: 53px;
+		text-align: center;
+		padding: 13px 0px;
+		font-weight: bold;
+	}
+
+	span.initials {
+		display: inline-block
+	}
+	span.right-text {
+		display: inline-block
+	}
+}
+
+section.to-do {
+	@include leftBox-rightText;
+}
+
+section.sections {
+	.entypo {
+		font-size: 57px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 15%;
+		text-align:center;
+	}
+
+	li {
+		background:#f5f5f5;
+		border: 1px solid #ededed;
+		margin: 10px;
+	}
+
+	p, strong, span {
+		display:inline-block;
+		vertical-align: middle;
+	}
+
+	strong {
+		width: 15%;
+		text-align: center;
+		position: relative;
+		right: 10px;
+	}
+
+	p {
+		width:50%;
+		font-size:14px;
+	}
+	div {
+		width:17%;
+		display: inline-block;
+
+		span {
+			text-align: center;
+			border: 2px solid #ebebeb;
+			display: block;
+			padding: 5px;
+			margin: 0 auto;
+			width: 18px;
+		}
+	}
+
+}
+
+section.resources {
+	li {
+		width: 148px;
+		height: 148px;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		@include card-background;
+	}
+	img {
+		margin: 0;
+		padding:0;
+	}
+	div.empty {
+		@include divEmpty (40px);
+		display: inline-block;
+		height: 148px;
+		width: 148px;
+	}
+}
+
+// Works alongside jQuery code to correctly style
+// hover states.  The footer.php jQuery adds a blue class
+// to which the following CSS styles.
+
+.blue-hover, section.sections {
+	.blue {
+		@include transition (all 0.3s);
+		&:hover {
+			background: $blue !important;
+			color:white;
+		}
+
+		a {
+			 color: white;
+		}
+
+		span.numbers {
+			background: #1f8f00;
+		}
+		span.box {
+			background:#ffffff;
+			color:#919191;
+			border-color:white;
+		}
+		.entypo {
+			color:white;
+		}
+		span.top a {
+			background:#f5f5f5;
+			color:#b5b5b5;
+		}
+		.datetime {
+			color:white;
+		}
+	}
+}
+
+section.to-do {
+	li {
+		color:#919191;
+		@include circle-hover(3%, 12px)
+	}
+}
+
+
+section.dashboard-cards {
+	@include four-numbers;
+	img {
+		margin-top:8px;
+	}
+	> div {
+		&:nth-child(even) {
+		    position: relative;
+		    right: 4px;
+		}
+		@include card-background;
+		display: inline-block;
+		width: 324px;
+		height: 324px;
+		vertical-align: top;
+		padding: 10px;
+	    @include hover-controls;
+	    .option-top-right, .option-bottom-right {
+	    	right:4%;
+	    }
+
+	    .option-top-right {
+	    	top:-1%;
+	    }
+
+		.option-bottom-right {
+			bottom:1.5%;
+		}
+
+	    span.top {
+	    	display: block;
+	    	a {
+				background: #b5b5b5;
+				color: white;
+				display: inline-block;
+				text-decoration: none;
+				height: 21px;
+				width: 30px;
+				text-align: center;
+				font-size: 12px;
+				vertical-align: middle;
+				padding-top: 9px;
+	    	}
+	    	strong {
+	    		font-size: 14px;
+				display: inline-block;
+				vertical-align: top;
+				@include ellipsis (256px, 19px);
+	    	}
+	    }
+	}
+	div.portrait {
+		span.bottom {
+			position: absolute;
+			left: 53%;
+			top: 9.4%;
+		}
+	}
+	div.landscape {
+		span.bottom {
+			position: absolute;
+			left: 44%;
+			top: 58%;
+		}
+	}
+	div.empty {
+			@include divEmpty(60px);
+	}
+}
+
+section.my-projects {
+	div.empty {
+		@include divEmpty(60px);
+		vertical-align: top;
+		left:11px;
+	}
+	> div {
+		display: inline-block;
+		width: 305px;
+		left: 11px;
+		height: 400px;
+		padding: 5px 15px;
+		@include card-background;
+		h3 {
+			display: inline-block;
+			width: 80%;
+			font-size: 16px;
+			margin: 6px 0 0 4px;
+			vertical-align: top;
+		}
+		img {
+			display: inline-block
+		}
+		.initials.entypo {
+			opacity:1;
+		}
+		@include hover-controls;
+		.option-top-right, .option-bottom-right {
+			right:3%;
+		}
+		.option-bottom-right, .option-bottom-left {
+			bottom:1.5%;
+		}
+		.option-bottom-left {
+			left: 3%;
+		}
+		ul {
+			margin-top:0px;
+		}
+		ul:first-of-type {
+			li {
+				display: inline-block;
+			}
+		}
+		ul:last-of-type {
+			li {
+				@include circle-hover (3%, 14px);
+				div .entypo {
+					top: -10px;
+					right: 0;
+				}
+			}	
+			@include leftBox-rightText;
+		}
+		@include transition (all 0.5s);
+		&:hover {
+			background:$light-blue;
+		}
+	}
+}
+
+section.link-to-screenshot, section.interactions, section.if-then-scenarios, section.dynamic-data, #fb-link-to-screenshot aside, #fb-select-from-existing aside {
+	h2 {
+		position: relative;
+		bottom: 5px;
+		margin: 0;
+	}
+	div {
+		width:175px;
+		height:175px;
+		margin-bottom:3px;
+		display:inline-block;
+		@include hover-controls;
+		@include card-background;
+		img {
+			display: block;
+		}
+		vertical-align: top;
+		strong {
+			display: block;
+			text-align: center;
+			margin-top: 2em;
+			text-decoration: underline;
+			font-size: 16px;
+		}
+		span {
+			text-align: center;
+			display: block;
+			margin: 8px;
+			font-weight: 300;
+			font-size: 15px;
+		}
+		p {
+			text-align: center;
+			display: block;
+			font-weight:300;
+		}
+	}
+	div.empty {
+		@include divEmpty(60px);
+	}
+}
+
+section.comment-interface, section.ix-interface, section.ui-interface, section.if-then-interface, section.dd-interface {
+	@include four-numbers;
+	ul {
+		margin-left:155px;
+	}
+	position:relative;
+	top:0;
+	left:0;
+	
+	div {
+		position:relative;
+		top:0;
+		left:0;
+		@include card-background;
+		width:450px;
+		height:450px;
+	}
+
+	a.entypo {
+		font-size: 46px;
+		position:absolute;
+		opacity:0;
+		@include transition (all 0.5s);
+	}
+	
+	a.left {
+		left:18%;
+		top:0%;
+	}
+
+	a.right {
+		right:5%;
+		top:0%;
+	}
+
+	span {
+		width: 40%;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		padding: 1em .5em;
+		position: absolute;
+		font-weight: 300;
+		top: 50%;
+		left: 50%;
+		margin-left:-102px;
+		margin-top:-43px;
+		opacity: 0;
+		@include transition (all 0.5s);
+	}
+	strong {
+		border-radius: 3em;
+		background: $dark-blue;
+		padding: 0.5em;
+		position: absolute;
+		opacity: 0.8;
+		color: white;
+		cursor: move;
+	}
+
+	&:hover {
+		a.entypo, span {
+			opacity: 1;
+		}
+	}
+
+}
+
+section.comments {
+	ul {
+		background:#f5f5f5;
+		li {
+			@include circle-hover(0%, 0%);
+			border: 1px solid $light-gray;
+			div.edit, div.archive {
+				top:20%;
+			}
+			div.edit {
+				right:5%;
+			}
+			div.archive {
+				right:12%;
+			}
+			span.comment-item {
+				display: inline-block;
+				width:20%;
+				position:absolute;
+				top: 34%;
+				left: 4%;
+			}
+			p {
+				display: inline-block;
+				width: 86%;
+				margin: 10px 0 10px 11%;
+			}
+			strong {
+				margin-right:5px;
+			}
+			a {
+				display: block;
+				width: 100%;
+				text-align: center;
+				background: none;
+				margin: 10px auto;
+			}
+		}
+	}
+}
+
+// Styling for fancybox div overlays
+
+#fb-resources, #fb-to-do, #fb-recent-activity, #fb-project-overview, #fb-if-then-scenario, #fb-ix-first-overlay,
+#fb-ix-second-overlay, #fb-ix-third-overlay, #fb-ix-fourth-overlay, #fb-ix-fifth-overlay, #fb-link-to-screenshot,
+#fb-select-from-existing, #fb-dynamic-data-type {
+	width:700px;
+	padding: 0 1em;
+
+	h1 {
+		display: block;
+		margin-left:0; 
+	}
+
+	div.tagline {
+		p {
+			display:inline-block;
+			color:#919191;
+			background: $initial-dark-gray;
+			padding: 10px 20px;
+			width: 66%;
+		}
+		a {
+			@include green-button;
+		}
+		
+	}
+	
+	a.done {
+		@include green-button;
+		float: right;
+	}
+	a.archive {
+		display:block;
+		text-align:center;
+		margin-right: 5%;
+	}
+	@include thumbnail-items(200px);
+	
+	ul.platform {
+		padding-right: 17px;
+		border-right: 1px solid $light-gray;
+		box-shadow: 1px 0px $light-gray;
+		li {
+			position:relative;
+			background: $light-gray;
+			margin-bottom:5px;
+			height: 50px;
+			a {
+				text-decoration: none;
+				background:none;
+				span {
+					position: absolute;
+					left:55px;
+					top:17px;
+				}
+			}
+
+		}
+	}
+}
+
+#fb-to-do, #fb-recent-activity {
+	@include leftBox-rightText;
+	div.tagline p {
+		display: block;
+		width:94%;
+		text-align: center;
+	}
+}
+
+#fb-to-do {
+	li {
+		@include circle-hover (3%, 20%);
+	}
+}
+
+/// These fancybox overlays have a 1/3 2/3 layout
+
+#fb-project-overview, #fb-ix-first-overlay, #fb-ix-second-overlay, #fb-ix-third-overlay, #fb-ix-fourth-overlay  {
+	width:600px;
+	div {
+		display: inline-block;
+		vertical-align: top;
+		&:nth-child(even) {
+			width:34%;
+		}
+		&:nth-child(odd) {
+			width:62%;
+			h2 {
+				padding-left:1em;
+			}
+		}
+	}
+	@include thumbnail-items(150px);
+	div.thumbnails {
+		width: 96%;
+		margin-left: 10px;
+		span.item img {
+			top: 14%;
+			left: 31%;
+		}
+	}
+}
+
+#fb-ix-first-overlay, #fb-ix-second-overlay, #fb-ix-third-overlay, #fb-ix-fourth-overlay  {
+	width:640px;
+	div {
+		/* The reason for so many nth child selectors is to avoid having
+		 To write so many classes.  These nth-child classes are just trying
+		 to more precisely layout and organize the ix screens to more closely
+		 match the mock ups */
+		&:nth-child(3) {
+			margin-top:3px;
+			a.view-all:last-of-type {
+				margin-left: 197px;
+				position: relative;
+				left: 12px;
+			}
+		}
+		&:nth-child(4){
+			border-right: 1px solid $light-gray;
+			box-shadow: 1px 0px $light-gray;
+			padding-right:9px;
+		}
+		&:nth-child(5){
+			textarea {
+				margin: 0 0 0 16px;
+			}
+		}
+	}
+	div.header {
+		margin-bottom:13px;
+		&:last-of-type {
+			h2 {
+				padding-left:23px;
+			}
+		}
+	}
+	a.add {
+		@include green-plus (35px);
+		display: inline-block;
+		vertical-align: top;
+		top:0;
+	}
+	a.custom-action {
+		display: inline-block;
+		vertical-align: top;
+		padding:0;
+		text-decoration: none;
+		height:35px;
+		background:$blue;
+		color:white;
+		span.entypo {
+			font-size: 32px;
+			padding-left: 12px;
+			position: relative;
+			top: 2px;
+			right: 3px;
+		}
+		span.action-text {
+			padding-top:8px;
+			padding-right: 14px;
+		}
+	}
+
+	ul.user-action {
+		li {
+			display: inline-block;
+			width: 32.1%;
+			margin: 4px 0 4px 0;
+		    a {
+				padding: 10px 10px 10px 10px;
+				border-radius: 100%;
+				display: block;
+				text-align: center;
+				height: 22px;
+				width: 22px;
+				text-decoration: none;
+				font-weight: bold;
+				color: #FFF;
+				background: $faded-orange;
+				font-size: 16px;
+		    }
+		}
+	}
+	a.gray {
+		background:#b5b5b5;
+	}
+	.text-square {
+	    background: $light-gray;
+	    text-align: center;
+	    height: 85px;
+	    width: 85px;
+	    display: inline-block;
+	    vertical-align: top;
+	    margin: .75em;
+	    font-weight: bold;
+		b {
+		    display:block;
+		    margin-top:29px;
+		}
+	}
+}
+
+#fb-ix-third-overlay, #fb-ix-fourth-overlay {
+	width:600px;
+}
+
+#fb-ix-fourth-overlay { 
+	span.box {
+		@include card-background;
+		height:120px;
+		width:120px;
+		display: inline-block;
+	}
+	div:nth-child(3) a.view-all:last-of-type {
+		margin-left:99px;
+	}
+}
+
+#fb-ix-fifth-overlay {
+	width:610px;
+	@include thumbnail-items (140px);
+	div.tagline p {
+		width:auto;
+	}
+	div.thumbnails {
+		width: 100%;
+		margin:0;
+		span.item {
+			width:147px;
+			height:147px;
+		}
+	}
+}
+
+#fb-if-then-scenario {
+	width:360px;
+	textarea {
+		border: 1px dotted #dedede;
+		background: $light-gray;
+		margin: 1em 0em;
+	}
+}
+
+/* Overlays for screenshot on left and cards on right */
+#fb-link-to-screenshot, #fb-select-from-existing {
+	width:1000px;
+	article {
+		width:48.5%;
+		display: inline-block;
+		vertical-align: top;
+		span {
+			border-right: 1px solid #e4e4e4;
+			display: inline-block;
+			padding-right: 18px;
+			div.box {
+				@include card-background;
+				width:450px;
+				height:450px;
+				display: block;
+			}
+		}
+		div.tagline {
+			margin-bottom:1em;
+			a.done {
+				margin: 0 0 0 4px;
+				float: none;
+				vertical-align: top;
+			}
+			p {
+				margin: 0;
+				padding: 10px 1em;
+				width: auto;
+			}
+		}
+		aside {
+			div {
+				width:157px;
+				height:157px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+#fb-select-from-existing {
+	aside div {
+		u,p,strong {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			cursor:pointer;
+			padding:10px 0px 0px 0px;
+			color:#919191;
+		}
+		u {
+			margin-top:30px;
+		}
+	}
+}
+
+#fb-dynamic-data-type {
+	width:900px;
+	input {
+		width:440px;
+		background:#e0e0e0;
+	}
+	textarea {
+		margin-left:0em;
+	}
+
+	a.view-all {
+		font-size: 15px;
+		margin-left: 5px;
+	}
+
+	a:not(.view-all) {
+		@include card-background;
+		@include transition (all 0.5s);
+		padding:0.75em;
+		display: inline-block;
+		text-decoration: none;
+		height:17px;
+		&:nth-of-type(2) {
+			margin-right:2em;
+		}
+		&:hover {
+			background: $dark-blue;
+			color:white;
+		}
+	}
+	div.squares a {
+		&:nth-of-type(2) {
+			margin-right:0;
+		}
+		margin:0;
+		width: 15px;
+		height:17px;
+		text-align: center;
+	}
+
+}
+
+/* Javascript related classes */
+.fancybox-close {
+	background-color: rgba(255, 0, 0, 0);
+}
+
+.fancybox-skin {
+	background-color:#fbfbfb !important;
+}
+.clickOverlayText {
+	position: absolute;
+	display: block;
+	width: 67%;
+	margin-left: 10%;
+	text-align: center;
+	top: 41%;
+	border-radius: 10em;
+	background: rgba(0, 0, 0, 0.64);
+	color: #FFF;
+	font-weight: 300;
+	padding: .5em 1em;
+	font-size: 14px;
+}
+
+/* Login screen related classes */
+body.login {
+	background:#f7f7f7;
+	header {
+		margin-top:2em;
+		color: #bfbfbf;
+		h1 {
+			font-weight:normal;
+			
+			margin-left:0px;
+			margin-bottom:6px;
+			font-size:24px;
+			b {
+				font-size:27px;
+				color:#7f7f7f;
+			}
+		}
+		a {
+			margin-left: 184px;
+			text-decoration: none;
+			font-size: 20px;
+			strong {
+				text-decoration: underline;
+				color:#7f7f7f;
+			}
+		}
+	}
+	div.white-background {
+		background:white;
+		padding:2em 2em 0.5em 2em;
+	}
+	article, aside {
+		display: inline-block;
+		background:white;
+		vertical-align: top;
+	}
+	article {
+		width:55%;
+		h1 {
+			color:black;
+			margin:0;
+		}
+		h2 {
+			margin-bottom:5px;
+		}
+		input {
+			width: 330px;				
+		}
+		a.view-all {
+			margin-left:4px;
+			font-size:16px;
+		}
+		a.done {
+			@include green-button;
+			margin: 1em 1em 1em 199px;
+			padding: 0.8em 45px;
+		}
+	}
+	aside {
+		width:44%;
+		background-color:#f7f7f7;
+		text-align: center;
+		padding:0em 0em 1em 0em;
+		height: 272px;
+		clear: both;
+		overflow: hidden;
+		p {
+			margin: 0.5em 1em;
+			&:last-of-type {
+				margin-bottom:0;
+			}
+		}
+		a.entypo {
+			font-size:103px;
+		}
+		h3 {
+			margin-top:0em;
+		}
+	}
+	div.login-buttons {
+		div.white-background {
+			padding-bottom:2em;
+			padding-top:1em;
+		}
+		margin-top:1px;
+		section {
+			padding-top:10px;
+			a {
+				text-decoration:none;
+				padding: 0.5em 1em;
+				font-weight:bold;
+				&:first-of-type{
+					background:$light-gray;
+					color:#7f7f7f;
+					margin-left: 30px;
+				}
+				&:last-of-type {
+					background:#b5b5b5;
+					color:white;
+					padding: 0.5em 63px;
+					margin-left:19px;
+				}
+			}
+			span {
+				color:#bfbfbf;
+				font-weight:bold;
+				font-size:20px;
+				margin-right:0%;
+				margin-left:2.5%;
+			}
+		}
+	}
+	footer {
+		h4 {
+			text-align: center;
+			font-weight:normal;
+			color: #bfbfbf;
+			strong {
+				font-weight:bold;
+				color:#7f7f7f;
+			}
+		}
+		div.companies {
+			margin:0 auto;
+			width:415px;
+			img {
+				width:200px;
+				height:auto;
+			}
+		}
+	}
+}
+body.sign-up {
+	main {
+		h1 {
+			display:block;
+			margin:0;
+		}
+		article {
+			width:48%;
+			position:relative;
+			left:4px;
+			input {
+				width:300px;
+			}
+			a.done {
+				margin: 1em 0em;
+				width: 210px;
+				display: block;
+				text-align: center;
+			}
+			&:last-of-type{
+				margin-left: 21px;
+			}
+		}		
+	}
+	div.login-buttons section a:last-of-type {
+		padding: 0.5em 72px;
+		margin-left: 40px;
+	}
+}
+
+body.forgot {
+	aside {
+		height: 232px;
+		margin-bottom: 1.5em;
+		h3 {
+			text-align: left;
+			padding:1em 1em 0em 1em;
+		}
+	}
+	article input {
+		width:336px;
+	}
+}
